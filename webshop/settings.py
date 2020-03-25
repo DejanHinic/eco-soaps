@@ -25,7 +25,7 @@ SECRET_KEY = '5^1l$5f_ayz5fzctuw-r2ufroe)_gmpqe12=pmq(@dpfuq4=r+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'), '8000-b04aca1f-4bf3-443a-858f-4f37d7e61d63.ws-eu01.gitpod.io']
+ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'), '8000-e16f1be9-0cf5-4811-9612-62bec0d1dd39.ws-eu01.gitpod.io']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django_forms_bootstrap',
     'accounts',
     'products',
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +67,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'cart.contexts.cart_contents',
             ],
         },
     },
@@ -126,6 +128,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
