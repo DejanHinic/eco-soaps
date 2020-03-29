@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% load static from staticfiles %} {% load bootstrap_tags %} {% block head_js %}
+<script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
+{% endblock %} {% block content %} {% for product_details in details %}
+<div class="product-detail-image">
+    <img class="materialboxed product-img" alt="Smartphone" src="{{ MEDIA_URL }}{{ product_details.image }}">
+</div>
+{% endfor %}
+<div class="product_details">
+    <h1 class="text-center">Name: {{ product.name }}</h1>
+    <h2 class="text-center">Description:</h2>
+    <p class="text-center">{{ product.description }}</p>
+    <h3 class="text-center">Price:</h3>
+    <p class="text-center"><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ product.price }}</p>
+</div>
+<div class="return">
+    <form method="post" action="{% url 'index' %}">
+        {% csrf_token %}
+        <div class="return">
+            <button class="btn btn-primary btn-lg continue" type="submit" style="text-align:center;">Continue Shopping</button>
+        </div>
+    </form>
+</div>
+<form method="post" action="{% url 'add_to_cart' product.id %}">
+    {% csrf_token %}
+    <div class="input-group-details">
+        <input name="quantity" type="number" min="0" max="999" class="form-control-details" placeholder="Quantity" required>
+        <span class="input-group-btn">
+            <button class="btn-details btn-success" type="submit">Add</button>
+                </span>
+    </div>
+</form>
+
+{% endblock %}

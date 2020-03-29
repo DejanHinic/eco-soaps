@@ -20,6 +20,12 @@
                         </span>
                     </div>
                 </form>
+                 <form method="post" action="{% url 'details' product.id %}">
+                {% csrf_token %}
+                    <div class="center">
+                        <button class="btn btn-primary btn-sm" type="submit">More details</button>
+                    </div>
+                </form>
             </div>
         </div>
     {% endfor %}

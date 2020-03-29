@@ -25,7 +25,7 @@ SECRET_KEY = '5^1l$5f_ayz5fzctuw-r2ufroe)_gmpqe12=pmq(@dpfuq4=r+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'), '8000-fe290b0e-5bca-4cfe-8428-012e3a972a87.ws-eu01.gitpod.io']
+ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'), '8000-c81255e9-477d-41bd-bd70-30dac80fe5a1.ws-eu01.gitpod.io']
 
 
 # Application definition
