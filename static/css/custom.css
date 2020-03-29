@@ -1,6 +1,5 @@
 body {
     font-family: Arial;
-    padding-top: 50px;
 }
 
 footer {
@@ -12,7 +11,7 @@ footer {
 }
 
 .icon-bar {
-    background-color: #fff;
+    background-color:blue;
 }
 
 .accountform {

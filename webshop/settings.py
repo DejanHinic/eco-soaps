@@ -25,7 +25,7 @@ SECRET_KEY = '5^1l$5f_ayz5fzctuw-r2ufroe)_gmpqe12=pmq(@dpfuq4=r+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'), '8000-c81255e9-477d-41bd-bd70-30dac80fe5a1.ws-eu01.gitpod.io']
+ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'),  '8000-a3e590f7-4336-4229-b1b4-ad314309ab8c.ws-eu01.gitpod.io']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'accounts',
     'products',
     'cart',
+    'homepage',
 ]
 
 MIDDLEWARE = [
