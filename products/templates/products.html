@@ -1,9 +1,39 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="row row-flex">
+<div class="container">
+    <div class="row row-flex">
     {% for product in products %}
-        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
+
+        <div class="col-md-4">
+            <div class="card" id="product_style_card" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')">
+                <div class="card-body" style="height: 13rem;">
+                    
+                </div>
+                <div class="card-body">
+                    <form method="post" action="{% url 'add_to_cart' product.id %}">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" type="submit">Add</button>
+                        </span>
+                    </div>
+                </form>
+                </div>
+                <button><a href="{% url 'details' product.id %}" class="card-link">More Info</a></button>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{ product.name }}</li>
+                    <li class="list-group-item">{{ product.description }}</li>
+                    <li class="list-group-item">€ {{ product.price }}</li>
+                </ul>
+                
+            </div>
+        </div>
+
+
+
+        <!-- <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
             <div class="panel-body">
                 <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
 
@@ -27,7 +57,8 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </div> -->
     {% endfor %}
+    </div>
 </div>
 {% endblock %}
