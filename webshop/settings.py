@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import env
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = '5^1l$5f_ayz5fzctuw-r2ufroe)_gmpqe12=pmq(@dpfuq4=r+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'),  '8000-a3e590f7-4336-4229-b1b4-ad314309ab8c.ws-eu01.gitpod.io']
+ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'),  '8000-fcde0cf2-2fd2-4b24-bdde-b6422fad6a3c.ws-eu01.gitpod.io']
 
 
 # Application definition
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'products',
     'cart',
     'homepage',
+    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -132,6 +134,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
