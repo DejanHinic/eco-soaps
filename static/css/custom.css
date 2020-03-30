@@ -17,11 +17,21 @@ footer {
 .accountform {
     padding-top: 20px;
 }
-.product {
+/* .product {
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
     width: 150px;
     height: 150px;
     margin: 0 auto;
+} */
+
+a {
+  color: #615994;
+}
+.product {
+    text-decoration-color: #615994;
+}
+nav {
+    background-color: lightblue;
 }
