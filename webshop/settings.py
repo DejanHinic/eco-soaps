@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '5^1l$5f_ayz5fzctuw-r2ufroe)_gmpqe12=pmq(@dpfuq4=r+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'),  '8000-fcde0cf2-2fd2-4b24-bdde-b6422fad6a3c.ws-eu01.gitpod.io']
 
