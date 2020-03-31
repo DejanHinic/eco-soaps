@@ -1,4 +1,4 @@
-$(function() {
+
     $("#payment-form").submit(function() {
         var form = this;
         var card = {
@@ -29,4 +29,3 @@ $(function() {
     });
     return false;
     });
-});
