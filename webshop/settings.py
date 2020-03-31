@@ -25,7 +25,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'), '8000-a376e314-cbdf-429a-a5aa-a59dd6b9bce5.ws-eu01.gitpod.io']
+ALLOWED_HOSTS = ['eco-soaps.herokuapp.com']
 
 
 # Application definition
