@@ -59,24 +59,6 @@ button.btn.btn-primary.btn-lg.continue{
     background-color: #17a2b8;
     border-color: #17a2b8;
 }
-/* footer */
-#footer_logo {
-    width: 100vw;
-    font-weight: 300;
-    background-color: lightblue;
-    height: 100px;
-    color: black;
-    padding-top: 30px;
-}
-.page-footer {
-    background-color: lightblue;
-}
-footer {
-    margin-top: 0;
-    padding-top: 0;
-    
-}
-
 /* login page */
 .accountform {
         width: 35%;
@@ -93,6 +75,7 @@ form.accountform{
 #login_container{
     text-align: -webkit-center;
     height: 75vh;
+    margin-bottom: 3%;
 }
 .form-control {
      text-align: center;
@@ -113,4 +96,37 @@ form.form-inline{
     margin-left: 20px;
     padding-top: 5px;
     margin-right: 20px;
+}
+/* cart */
+#cartsum_container{
+    margin-bottom: 3%;
+}
+/* footer */
+span#dejanhinic{
+    color: black;
+}
+/* footer */
+#footer_logo {
+    width: 100vw;
+    font-weight: 300;
+    background-color: lightblue;
+    height: 100px;
+    color: black;
+    padding-top: 30px;
+}
+.page-footer {
+    background-color: lightblue;
+}
+footer {
+    margin-top: 0;
+    padding-top: 0;
+    position: fixed;
+}
+/* index homepage */
+.welcome_slide_image{
+    margin-top: 5%;
+}
+#carouselExampleFade{
+    margin-top: 20px;
+    margin-bottom: 20px
 }

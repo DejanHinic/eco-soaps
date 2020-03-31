@@ -40,15 +40,21 @@
     {% endfor %}
     </div>
  </div>
-    <div class="container">
+    <div id="cartsum_container" style="margin-top:10%;" class="container">
         <div class="row">
         
-            <span><h2>Total</h2></span><br>
-            <h2>{{ total }}</h2>
-            <h2><a href="{% url 'checkout' %}" class="btn btn-success" role="button">Checkout</a></h2>
+            <div class="col-1"><h2>Total</h2></div>
+            <div class="col-1"><h2>{{ total }}</h2></div>
+            <div class="col-1"><h2><a href="{% url 'checkout' %}" class="btn btn-success" role="button">Checkout</a></h2></div>
     
       </div>
  </div>
     
+
+    <!-- <div id="login_container" style="margin-top:17%;" class="container">
+    <h2>Success!</h2>
+    <p>You are logged in as {{ user.email }} </p>
+</div>
+<br> -->
 
 {% endblock %}
