@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
-
+{% load bootstrap_tags %}
 {% block content %}
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
 
-        <div class="carousel-item active" style="background-image: url(media/images/8.jpg);">
+        <div class="carousel-item active" style="">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
-                        <div class="col-7 col-md-8">
+                        <div class="offset-md-2 col-md-4 col-sm-2">
                             <div class="welcome_slide_text">
-                                <p data-animation="fadeInUp" data-delay="0">Special Offer</p>
-                                <h2 data-animation="fadeInUp" data-delay="300ms">40% Off Today</h2>
-                                <h4 data-animation="fadeInUp" data-delay="600ms">Only $78</h4>
-                                <a href="#" class="btn btn-primary" data-animation="fadeInUp" data-delay="1s">Buy Now</a>
+                                <p>Laundry Detergent</p>
+                                <h2>Ecover</h2>
+                                <h4>Lavender fragrance <span class="regular-price"> €11</span></h4>
+                                <a href="{% url 'products' %}" class="btn btn-primary">Check Collection</a>
                             </div>
                         </div>
-                        <div class="col-5 col-md-4">
+                        <div class="col-md-4 offset-md-2 col-sm-10">
                             <div class="welcome_slide_image">
                                 <img src="static/img/laundry2.jpg" alt="" data-animation="bounceInUp" data-delay="500ms">
                                 <div class="discount_badge" data-animation="bounceInDown" data-delay="1.2s">
@@ -26,18 +26,18 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item" style="background-image: url(media/images/7.jpg);">
+            <div class="carousel-item" style="">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
-                        <div class="col-12 col-md-8">
+                        <div class="offset-md-2 col-md-4 col-sm-2">
                             <div class="welcome_slide_text">
-                                <p data-animation="fadeInUp" data-delay="0">Sustainable Clock</p>
-                                <h2 data-animation="fadeInUp" data-delay="300ms">Smart Watch</h2>
-                                <h4 data-animation="fadeInUp" data-delay="600ms">Only $31 <span class="regular-price">$43</span></h4>
-                                <a href="#" class="btn btn-primary" data-animation="fadeInUp" data-delay="600ms">Check Collection</a>
+                                <p>Antibacterial Cleaner</p>
+                                <h2>Method anti - bac</h2>
+                                <h4>Rhubarb fragrance <span class="regular-price"> €8</span></h4>
+                                <a href="{% url 'products' %}" class="btn btn-primary">Check Collection</a>
                             </div>
                         </div>
-                        <div class="col-5 col-md-4">
+                        <div class="col-md-4 offset-md-2 col-sm-10">
                             <div class="welcome_slide_image">
                                 <img src="static/img/cleaning.jpg" alt="" data-animation="bounceInUp" data-delay="500ms">
                                 <div class="discount_badge" data-animation="bounceInDown" data-delay="1.2s">
@@ -48,18 +48,18 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item" style="background-image: url(media/images/6.jpg);">
+            <div class="carousel-item" style="">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
-                        <div class="col-12 col-md-6">
+                        <div class="offset-md-2 col-md-4 col-sm-2">
                             <div class="welcome_slide_text">
-                                <p class="text-white" data-animation="fadeInUp" data-delay="0">100% Cotton</p>
-                                <h2 class="text-white" data-animation="fadeInUp" data-delay="300ms">Hot Shoes</h2>
-                                <h4 class="text-white" data-animation="fadeInUp" data-delay="600ms">Now $19</h4>
-                                <a href="#" class="btn btn-primary" data-animation="fadeInUp" data-delay="900ms">Add to cart</a>
+                                <p >Dishwashing Liquid</p>
+                                <h2 >Attitude</h2>
+                                <h4 >Natural and Sensitive <span class="regular-price"> €32</span></h4>
+                                <a href="{% url 'products' %}" class="btn btn-primary">Check Collection</a>
                             </div>
                         </div>
-                        <div class="col-5 col-md-4">
+                        <div class="col-md-4 offset-md-2 col-sm-10">
                             <div class="welcome_slide_image">
                                 <img src="static/img/dishwashing2.jpg" alt="" data-animation="bounceInUp" data-delay="500ms">
                                 <div class="discount_badge" data-animation="bounceInDown" data-delay="1.2s">
@@ -80,4 +80,35 @@
             <span class="sr-only">Next</span>
         </a>
 </div>
+    <div class="container">
+        <div class="card-deck">
+        <div class="card">
+        <img src="static/img/society.jpg" class="card-img-top" style="height: 18em;" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Irish Organic Association</h5>
+            <p class="card-text">We are taking part in Irish Organic society. In a society characterized by organic solidarity,
+             there is relatively greater division of labour, with individuals functioning much like the interdependent but differentiated organs of a living body.</p>
+            <p><a target="_blank" href="http://www.irishorganicassociation.ie/">See More...</a></p>
+        </div>
+        </div>
+        <div class="card">
+        <img src="static/img/tipsandtricks.jpg" class="card-img-top" style="height: 18rem;" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Tips & Tricks</h5>
+            <p class="card-text">Tips & Tricks for stain removal and for washing and cleaning with organic products</p>
+            <p><a target="_blank" href="https://www.sonett.eu/anwendung/waschanleitung/">See More...</a></p>
+        </div>
+        </div>
+        <div class="card">
+        <img src="static/img/whyorganic.jpg" class="card-img-top" style="height: 18rem;" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Why Organic?</h5>
+            <p class="card-text">By seeking alternatives, consumers can take a leap towards a better and a healthier future. 
+            Instead of using cheap chemicals that are harmful to the skin and to the planet, the people behind these products use ingredients that provide real benefits to consumers.</p>
+            <p><a target="_blank" href="https://alluvian.co/blog/2016/11/21/the-benefits-of-organic-soap">See More...</a></p>
+        </div>
+        </div>
+        </div>
+    </div>
+
 {% endblock %}

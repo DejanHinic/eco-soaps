@@ -80,6 +80,10 @@ form.accountform{
 .form-control {
      text-align: center;
 }
+a.btn.btn-primary{
+      background-color: #17a2b8;
+      border-color: #17a2b8;
+}
 button.btn.btn-primary {
       background-color: #17a2b8;
       border-color: #17a2b8;
@@ -117,11 +121,11 @@ span#dejanhinic{
 .page-footer {
     background-color: lightblue;
 }
-footer {
+/* footer {
     margin-top: 0;
     padding-top: 0;
     position: fixed;
-}
+} */
 /* index homepage */
 .welcome_slide_image{
     margin-top: 5%;
@@ -129,4 +133,7 @@ footer {
 #carouselExampleFade{
     margin-top: 20px;
     margin-bottom: 20px
+}
+.jumbotron{
+    height: 0;
 }
