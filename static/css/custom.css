@@ -63,9 +63,6 @@ button.btn.btn-primary.btn-lg.continue{
 .accountform {
         width: 35%;
 }
-.form-group {
-    margin-bottom: 4rem;
-}
 legend {
     margin-bottom: 2rem;
 }
@@ -139,7 +136,7 @@ span#dejanhinic{
 }
 
 /* checkoutform */
-.payment-form {
+.form-group {
     margin-bottom: 1rem;
 
 }
