@@ -137,3 +137,9 @@ span#dejanhinic{
 .jumbotron{
     height: 0;
 }
+
+/* checkoutform */
+.payment-form {
+    margin-bottom: 1rem;
+
+}
