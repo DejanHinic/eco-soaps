@@ -105,3 +105,12 @@ button.btn.btn-primary {
     background-color: lightblue;
     color: black;
 }
+form.form-inline{
+    display: contents;
+}
+.input-group-addon{
+    font-size: x-large;
+    margin-left: 20px;
+    padding-top: 5px;
+    margin-right: 20px;
+}
