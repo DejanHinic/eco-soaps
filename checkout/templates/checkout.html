@@ -23,7 +23,7 @@
     <div class="row row-flex">
        
 {% for item in cart_items %}
-        <div class="col-md-6 col-sm-12">
+        <div class="col-md-4 col-sm-12">
             <div class="card" id="product_style_card" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')">
                 <div class="card-body" style="height: 19rem;"> 
                 </div>
@@ -49,7 +49,7 @@
             <h2>Total</h2><br>
             <h2>€{{ total }}</h2>
         </div>
-        <div class="col-md-6 col-sm-12">
+        <div class="col-md-4 col-sm-12">
             <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
                 <legend>Payment Details</legend>
                 <div id="credit-card-errors" style="display: none;">

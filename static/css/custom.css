@@ -14,27 +14,15 @@ a.navbar-brand{
 .accountform {
     padding-top: 20px;
 }
-/* .product {
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-} */
-
 nav {
     background-color: lightblue;
 }
-
 #product_style_card {
-     
       margin-top: 20px;
       margin-bottom: 20px;
       background-position: cover;
       background-repeat: no-repeat;
 }
-
 .btn-success {
     color: #fff;
     background-color: #17a2b8;
@@ -118,11 +106,6 @@ span#dejanhinic{
 .page-footer {
     background-color: lightblue;
 }
-/* footer {
-    margin-top: 0;
-    padding-top: 0;
-    position: fixed;
-} */
 /* index homepage */
 .welcome_slide_image{
     margin-top: 5%;
@@ -134,7 +117,6 @@ span#dejanhinic{
 .jumbotron{
     height: 0;
 }
-
 /* checkoutform */
 .form-group {
     margin-bottom: 1rem;
