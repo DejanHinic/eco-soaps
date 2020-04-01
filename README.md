@@ -3,7 +3,7 @@
 
 Stream Three Project: Data Centric Development - Milestone Project
 
-<!-- ![EcOs Organic Soaps](https://github.com/DejanHinic/cook_book/blob/master/static/images/screencapture-noom-noom-cookbook-herokuapp-com-1583152419684.png?raw=true) -->
+![EcOs Organic Soaps](https://github.com/DejanHinic/eco-soaps/blob/master/wireframe-mockups/screencapture-eco-soaps.png?raw=true)
 
 
 This project is part of the 'Full Stack Frameworks with Django' module of the Code Institute Full Stack Software Development course.
