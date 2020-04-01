@@ -1,12 +1,10 @@
 [![Build Status](https://travis-ci.com/DejanHinic/eco-soaps.svg?branch=master)](https://travis-ci.com/DejanHinic/eco-soaps)
 # EcOs - Organic soaps webshop
 
-Stream Three Project: Data Centric Development - Milestone Project
+This project is part of the 'Full Stack Frameworks with Django' module of the Code Institute Full Stack Software Development course.
 
 ![EcOs Organic Soaps](https://github.com/DejanHinic/eco-soaps/blob/master/wireframe-mockups/screencapture-eco-soaps.png?raw=true)
 
-
-This project is part of the 'Full Stack Frameworks with Django' module of the Code Institute Full Stack Software Development course.
 
 Project consists of the following sections:
 
@@ -87,12 +85,6 @@ The following [wireframe](https://github.com/DejanHinic/eco-soaps/tree/master/wi
 ### Existing Features
 
 The project consists of various features presented below.
-
-#### Page loading
-
-- **Spinner** - jQuery method `show()` and `hide()` was used to create spinner showing while page is loading;
-
-- **Overlay** - overlay that fades out the background while page is loading;
 
 #### Buttons
 
@@ -240,13 +232,11 @@ All the features were tested manually throughout the application development pro
 | Buttons (including anchor links)     | Reset password                           | - test if clicking on button sent the message to mail;<br> - test all possibilities are correctly returned;                                                                                                                                                                                                                                                                                                                 | Message setnt confirmed but never recieve it on real mail.  |
 |                                      | GitHub link                              | - test if clicking the link redirects user to my repository;<br> - test if GitHub page opens in a new tab;                                                                                                                                                                                                                                                                                                                  | No bugs.                                                |
 |                                      | Detail view                              | - test if clicking the link redirect to detail page;<br> ;                                                                                                                                                                                                                                                                                                                                                                  | No bugs.                                                |
-| Forms                                | Sign up form                             | - test if input validation works correctly for each field;<br> - test if there is any field left empty the form cannot be submitted;<br> - test if submitted form saves data correctly into the database;<br> - test if password hashing works i.e. password saved to database is hashed;                                                                                                                                   | No bugs.                                                  |
-|                                      | Sign in form                             | - test if input validation works correctly for each field;<br> - test if there is any field left empty the form cannot be submitted;<br> - test is user can log in using incorrect password;                                                                                                                                                                                                                                | No bugs.                                                   |
+| Forms                                | Register form                             | - test if input validation works correctly for each field;<br> - test if there is any field left empty the form cannot be submitted;<br> - test if submitted form saves data correctly into the database;<br> - test if password hashing works i.e. password saved to database is hashed;                                                                                                                                   | No bugs.                                                  |
+|                                      | Log in form                             | - test if input validation works correctly for each field;<br> - test if there is any field left empty the form cannot be submitted;<br> - test is user can log in using incorrect password;                                                                                                                                                                                                                                | No bugs.                                                   |
 |                                      | Checkout                                 | - test if input validation works correctly for each field;<br> - test if there is any field left empty the form cannot be submitted;<br> - test if submitted form saves data correctly into the database;                                                                                                                                                                                                                   | No bugs.                                                  |
 | Structure                            | Navbar                                   | - test if all navbar menu items redirect user to the appropriate page;<br> - test if item that is currently active is highlighted;<br> - test if navbar collapses on smaller devices;                                                                                                                                                                                                                                       | No bugs.                                                 |
 |                                      | Footer                                   | - test if GitHub link works correctly;<br> - test if footer stays at the bottom of the page;                                                                                                                                                                                                                                                                                                                                | No bugs.                                                 |
-| Alerts                               | Toast messages                           | - test if all flash messages are styled with toastr;<br> - test if no text is cut off;<br> - test if delete button and progress displays correctly;<br> - test if different colors applied to different categories of toast messages;                                                                                                                                                                                       | No unresolved bugs left.                                 |
-|                                      | Delete confirmation messages             | - test if confirmation message pops up when trying to delete a review or account;<br> - test if clicking 'delete' button on the message performs deleting;<br> - test if clicking 'cancel' cancels the action;                                                                                                                                                                                                              | No unresolved bugs left.                                 |
 | Other                                | Search bar                               | - test various search bar inputs (ones that exist in the database and ones that do not);<br> - test search bar with no input provided;<br> - test if inputs are submitted on 'enter';<br> - check if search bar in not collapsing along with other menu items on smaller devices;                                                                                                                                           | No bugs.                                                 |
 
 
