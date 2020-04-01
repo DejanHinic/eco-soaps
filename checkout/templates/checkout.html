@@ -46,8 +46,8 @@
                 </form>  
             </div>
 {% endfor %}
-            <h2>Total</h2>
-            <h2>{{ total }}</h2>
+            <h2>Total</h2><br>
+            <h2>€{{ total }}</h2>
         </div>
         <div class="col-md-6 col-sm-12">
             <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
@@ -60,6 +60,7 @@
                 {% csrf_token %}
                     <input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
             </form>
+            <br>
         </div>   
     </div>
 </div>
