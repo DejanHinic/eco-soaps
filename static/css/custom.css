@@ -124,3 +124,8 @@ span#dejanhinic{
     margin-bottom: 1rem;
 
 }
+/* small devices */
+@media (max-width: 450px) {
+.footer {
+    position: fixed;
+}

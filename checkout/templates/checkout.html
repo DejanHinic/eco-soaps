@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
-
 {% block head_js %}
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
-    //<![CDATA[
+	//<![CDATA[
         Stripe.publishableKey = '{{ publishable }}';
     //]]>
 </script>
@@ -14,54 +13,54 @@
 
 {% block content %}
 <div class="container">
-    <div class="row">
-        <h2>Checkout</h2>
-    </div>
+	<div class="row">
+		<h2>Checkout</h2>
+	</div>
 </div>
 <br>
 <div class="container">
-    <div class="row row-flex">
-       
-{% for item in cart_items %}
-        <div class="col-md-4 col-sm-12">
-            <div class="card" id="product_style_card" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')">
-                <div class="card-body" style="height: 19rem;"> 
-                </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">{{ item.product.name }}</li>
-                        <li class="list-group-item">{{ item.product.category }}</li>
-                        <li class="list-group-item">€ {{ item.product.price }}</li>
-                    </ul>
-                <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label for="exampleInputAmount" class="sr-only">New Qty</label>
-                        <div class="input-group">
-                            <div class="input-group-addon">Qty</div>
-                            <input name="quantity" type="number" min="0" max="999" class="form-control" required>
-                            <div class="input-group-addon">{{item.quantity}}</div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
-                </form>  
-            </div>
-{% endfor %}
-            <h2>Total</h2><br>
-            <h2>€{{ total }}</h2>
-        </div>
-        <div class="col-md-4 col-sm-12">
-            <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
-                <legend>Payment Details</legend>
-                <div id="credit-card-errors" style="display: none;">
-                    <div id="alert-message block-message error" id="stripe-error-message"></div>
-                </div>
-                    {{ order_form | as_bootstrap }}
-                    {{ payment_form | as_bootstrap }}
-                {% csrf_token %}
-                    <input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+	<div class="row row-flex">
+		{% for item in cart_items %}
+		<div class="col-md-4 col-sm-12">
+			<div class="card" id="product_style_card"
+				style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')">
+				<div class="card-body" style="height: 19rem;">
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">{{ item.product.name }}</li>
+					<li class="list-group-item">{{ item.product.category }}</li>
+					<li class="list-group-item">€ {{ item.product.price }}</li>
+				</ul>
+				<form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
+					{% csrf_token %}
+					<div class="form-group">
+						<label for="exampleInputAmount" class="sr-only">New Qty</label>
+						<div class="input-group">
+							<div class="input-group-addon">Qty</div>
+							<input name="quantity" type="number" min="0" max="999" class="form-control" required>
+							<div class="input-group-addon">{{item.quantity}}</div>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
+				</form>
+			</div>
+			{% endfor %}
+			<h2>Total</h2><br>
+			<h2>€{{ total }}</h2>
+		</div>
+		<div class="col-md-4 col-sm-12">
+			<form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
+				<legend>Payment Details</legend>
+				<div id="credit-card-errors" style="display: none;">
+					<div id="alert-message block-message error" id="stripe-error-message"></div>
+				</div>
+				{{ order_form | as_bootstrap }}
+				{{ payment_form | as_bootstrap }}
+				{% csrf_token %}
+				<input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
             </form>
-            <br>
-        </div>   
-    </div>
-</div>
-{% endblock %}
+				<br>
+        </div>
+		</div>
+	</div>
+	{% endblock %}

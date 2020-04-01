@@ -2,35 +2,33 @@
 {% load bootstrap_tags %}
 {% block content %}
 <div class="container">
-    <div class="row row-flex">
-    {% for product in products %}
-
-        <div class="col-md-4">
-            <div class="card" id="product_style_card" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')">
-                <div class="card-body" style="height: 13rem;">
-                    
-                </div>
-                <div class="card-body">
-                    <form method="post" action="{% url 'add_to_cart' product.id %}">
-                    {% csrf_token %}
-                    <div class="input-group">
-                        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity" required>
-                        <span class="input-group-btn">
+	<div class="row row-flex">
+		{% for product in products %}
+		<div class="col-md-4">
+			<div class="card" id="product_style_card"
+				style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')">
+				<div class="card-body" style="height: 13rem;">
+				</div>
+				<div class="card-body">
+					<form method="post" action="{% url 'add_to_cart' product.id %}">
+						{% csrf_token %}
+						<div class="input-group">
+							<input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity" required>
+							<span class="input-group-btn">
                             <button class="btn btn-success" type="submit">Add</button>
                         </span>
-                    </div>
-                </form>
-                </div>
-                <button id="detail_button"><a href="{% url 'details' product.id %}" class="card-link">More Info</a></button>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{{ product.name }}</li>
-                    <li class="list-group-item">{{ product.category }}</li>
-                    <li class="list-group-item">€ {{ product.price }}</li>
-                </ul>
-                
-            </div>
-        </div>
-    {% endfor %}
-    </div>
+						</div>
+					</form>
+				</div>
+				<button id="detail_button"><a href="{% url 'details' product.id %}" class="card-link">More Info</a></button>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">{{ product.name }}</li>
+					<li class="list-group-item">{{ product.category }}</li>
+					<li class="list-group-item">€ {{ product.price }}</li>
+				</ul>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
 </div>
 {% endblock %}

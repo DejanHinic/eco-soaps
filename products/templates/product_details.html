@@ -1,47 +1,42 @@
 {% extends 'base.html' %} {% load static from staticfiles %} {% load bootstrap_tags %} {% block head_js %}
 <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
-{% endblock %} {% block content %} 
-
+{% endblock %} {% block content %}
 {% for product_details in details %}
-
-
-    
-        
 {% endfor %}
 <div class="jumbotron">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="product_details">
-                    <h1 class="text-center">{{ product.name }}</h1><br>
-                    <h5 class="text-center">{{ product.description }}</h5><br>
-                    <h3 class="text-center"><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>€ {{ product.price }}</h3>
-                </div><br>
-            
-                <form method="post" action="{% url 'add_to_cart' product.id %}">
-                {% csrf_token %}
-                <div class="input-group-details">
-                    <input name="quantity" type="number" min="0" max="999" class="form-control-details" placeholder="Quantity" required>
-                    <span class="input-group-btn">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="product_details">
+					<h1 class="text-center">{{ product.name }}</h1><br>
+					<h5 class="text-center">{{ product.description }}</h5><br>
+					<h3 class="text-center"><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>€
+						{{ product.price }}</h3>
+				</div><br>
+				<form method="post" action="{% url 'add_to_cart' product.id %}">
+					{% csrf_token %}
+					<div class="input-group-details">
+						<input name="quantity" type="number" min="0" max="999" class="form-control-details" placeholder="Quantity" required>
+						<span class="input-group-btn">
                         <button class="btn-details btn-success" type="submit">Add</button>
                     </span>
+					</div>
+				</form><br>
+				<div class="return">
+					<form method="post" action="{% url 'index' %}">
+						{% csrf_token %}
+						<div class="return">
+							<button class="btn btn-primary btn-lg continue" type="submit" style="text-align:center;">Continue Shopping</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="product-detail-image">
+					<img class="materialboxed product-img" alt="Smartphone" src="{{ MEDIA_URL }}{{ product.image }}">
                 </div>
-                </form><br>
-                <div class="return">
-                    <form method="post" action="{% url 'index' %}">
-                        {% csrf_token %}
-                        <div class="return">
-                            <button class="btn btn-primary btn-lg continue" type="submit" style="text-align:center;">Continue Shopping</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-6">
-               <div class="product-detail-image">
-                    <img class="materialboxed product-img" alt="Smartphone" src="{{ MEDIA_URL }}{{ product.image }}">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{% endblock %}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endblock %}
