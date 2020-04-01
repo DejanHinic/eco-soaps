@@ -20,7 +20,7 @@ nav {
 #product_style_card {
       margin-top: 20px;
       margin-bottom: 20px;
-      background-position: cover;
+      /* background-position: cover; */
       background-repeat: no-repeat;
 }
 .btn-success {
@@ -127,5 +127,5 @@ span#dejanhinic{
 /* small devices */
 @media (max-width: 450px) {
 .footer {
-    position: fixed;
+    position: fixed;}
 }
